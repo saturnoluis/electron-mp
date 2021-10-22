@@ -19,7 +19,7 @@ function main () {
   $.react.stdout.on('data', data => {
     print(data);
 
-    if(data.toString().includes('Compiled successfully')) {
+    if(data.toString().includes('Compiled successfully') && !$.electron) {
       log(`💫 Starting electron! 💫`);
 
       $.electron = spawn('npm', ['run', 'start-electron-dev', ...electronArgv]);
