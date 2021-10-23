@@ -1,21 +1,35 @@
+import { motion } from "framer-motion";
 import './Poc.css';
 
-export default function Poc () {
+const Album = ({ id }) => {
   return (
-    <>
-      <div className="Coverflow">
-        <ul className="Coverflow__wrapper">
-          <li className="Album">1</li>
-          <li className="Album">2</li>
-          <li className="Album">3</li>
-          <li className="Album">4</li>
-          <li className="Album">5</li>
-          <li className="Album">6</li>
-          <li className="Album">7</li>
-          <li className="Album">8</li>
-          <li className="Album">9</li>
-        </ul>
+    <motion.li
+      whileTap={{ scale: .9 }}
+      className="Album">
+
+      <div className="Album__cover">
+        {id}
       </div>
-    </>
+    </motion.li>
+  );
+}
+
+export default function Poc () {
+  const albums = [...Array(10).keys()];
+
+  return (
+    <div className="Coverflow">
+      <motion.ul
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={1.5}
+        onDragEnd={
+          (event, info) => console.log(info)
+        }
+        className="Coverflow__wrapper">
+
+        {albums.map(id => <Album id={id} key={id} />)}
+      </motion.ul>
+    </div>
   );
 }

@@ -2,7 +2,6 @@
   background-color: black;
   height: fit-content;
   overflow: hidden;
-  overflow-x: scroll;
   box-sizing: border-box;
 }
 
@@ -10,11 +9,12 @@
   width: fit-content;
   display: flex;
   flex-direction: row;
-  padding: 20px;
+  padding: 10px;
+  background-color: maroon;
 }
 
 .Album {
-  --album-size: 60vh;
+  --album-size: 62vh;
 
   display: flex;
   justify-content: center;
@@ -22,7 +22,10 @@
   width: var(--album-size);
   height: var(--album-size);
   box-sizing: border-box;
-  background: var(--color_bg-glow);
-  border-radius: 12px;
-  margin: 20px;
+}
+
+.Album__cover {
+  background-color: indianred;
+  width: 90%;
+  height: 90%;
 }
