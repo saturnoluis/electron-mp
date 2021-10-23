@@ -1,0 +1,28 @@
+.Coverflow {
+  background-color: black;
+  height: fit-content;
+  overflow: hidden;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+
+.Coverflow__wrapper {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.Album {
+  --album-size: 60vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--album-size);
+  height: var(--album-size);
+  box-sizing: border-box;
+  background: var(--color_bg-glow);
+  border-radius: 12px;
+  margin: 20px;
+}
