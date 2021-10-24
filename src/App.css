@@ -21,3 +21,10 @@
   box-shadow: inset  1px  1px 2px 0px var(--color_border-glow),
               inset -2px -2px 2px 0px var(--color_border-dark);
 }
+
+.visual-center {
+  width: 1px;
+  height: 30px;
+  background-color: yellow;
+  margin: 0 auto;
+}

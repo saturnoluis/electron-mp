@@ -1,20 +1,26 @@
 .Coverflow {
   background-color: black;
   height: fit-content;
+  width: 100vw;
   overflow: hidden;
   box-sizing: border-box;
+  position: relative;
 }
 
 .Coverflow__wrapper {
   width: fit-content;
+  min-width: 100vw;
   display: flex;
   flex-direction: row;
-  padding: 10px;
   background-color: maroon;
+  justify-content: space-evenly;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 
 .Album {
-  --album-size: 62vh;
+  --album-size: 500px;
 
   display: flex;
   justify-content: center;
@@ -28,4 +34,16 @@
   background-color: indianred;
   width: 90%;
   height: 90%;
+  position: relative;
+}
+
+.Album__cover span {
+  color: white;
+  width: 3px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: black;
+  display: block;
+  font-size: 30px;
 }
